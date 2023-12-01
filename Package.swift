@@ -39,7 +39,7 @@ let package = Package(
                 .product(name: "Factory", package: "Factory"),
                 .product(name: "ZIPFoundation", package: "ZIPFoundation")
             ],
-            path: "ENMobileUtilsTests"
+            path: "./"
         )
     ]
 )
