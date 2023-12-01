@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "ENMobileUtils",
-            targets: ["ENMobileUtils, ENMobileUtilsFramework"]
+            targets: ["ENMobileUtils", "ENMobileUtilsFramework"]
         )
     ],
     dependencies: [
@@ -45,8 +45,7 @@ let package = Package(
                 .product(name: "SwiftJWT", package: "Swift-JWT"),
                 .product(name: "Factory", package: "Factory"),
                 .product(name: "ZIPFoundation", package: "ZIPFoundation"),
-            ],
-            path: "ENMobileUtilsFramework"
+            ]
         )
     ]
 )
