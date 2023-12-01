@@ -9,8 +9,12 @@ let package = Package(
     products: [
         .library(
             name: "ENMobileUtils",
+            targets: ["ENMobileUtils"]
+        ),
+        .library(
+            name: "ENMobileUtils",
             type: .dynamic,
-            targets: ["ENMobileUtils", "ENMobileUtilsDependencies"]
+            targets: ["ENMobileUtilsDependencies"]
         )
     ],
     dependencies: [
