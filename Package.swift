@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "ENMobileUtils",
+    name: "ENMobileUtilsFramework",
     platforms: [
         .iOS(.v14)
     ],
