@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "ENMobileUtils",
-            targets: ["ENMobileUtils", "ENMobileUtilsDependencies"]
+            targets: ["ENMobileUtils"]
         )
     ],
     dependencies: [
