@@ -8,7 +8,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ENMobileUtils",
+            name: "ENMobileUtilsFramework",
             targets: ["ENMobileUtils"]
         )
     ],
