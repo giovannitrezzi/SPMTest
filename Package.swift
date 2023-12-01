@@ -47,7 +47,7 @@ let package = Package(
           name: "ENMobileUtilsTarget",
           dependencies: [.target(name: "ENMobileUtilsWrapper",
                                  condition: .when(platforms: [.iOS]))],
-          path: "Wrapper"
+          path: "SwiftPM-PlatformExclude/Wrapper"
         ),
         .target(
           name: "ENMobileUtilsWrapper",
