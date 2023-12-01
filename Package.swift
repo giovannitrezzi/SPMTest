@@ -9,6 +9,10 @@ let package = Package(
     products: [
         .library(
             name: "ENMobileUtils",
+            targets: ["ENMobileUtils"]
+        ),
+        .library(
+            name: "ENMobileUtils",
             type: .dynamic,
             targets: ["ENMobileUtilsTarget"]
         )
@@ -53,10 +57,10 @@ let package = Package(
         .target(
           name: "ENMobileUtilsWrapper",
           dependencies: [
-            .target(
-              name: "ENMobileUtils",
-              condition: .when(platforms: [.iOS])
-            ),
+            // .target(
+            //   name: "ENMobileUtils",
+            //   condition: .when(platforms: [.iOS])
+            // ),
             .product(name: "Alamofire", package: "Alamofire"),      
             .product(name: "SwiftJWT", package: "Swift-JWT"),
             .product(name: "Factory", package: "Factory"),
