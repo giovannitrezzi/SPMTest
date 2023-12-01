@@ -8,8 +8,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ENMobileUtilsFramework",
-            targets: ["ENMobileUtils"]
+            name: "ENMobileUtils",
+            targets: ["ENMobileUtilsTarget"]
         )
     ],
     dependencies: [
@@ -24,22 +24,50 @@ let package = Package(
 //            dependencies: ["Alamofire", "Factory", .product(name: "SwiftJWT", package: "Swift-JWT"), "ZIPFoundation"],
 //            path: "Sources/ENMobileUtils"
 //        ),
+        // .target(
+        //     name: "ENMobileUtils",
+        //     dependencies: [
+        //         .target(name: "ENMobileUtilsFramework"),
+        //         .product(name: "Alamofire", package: "Alamofire"),
+        //         .product(name: "SwiftJWT", package: "Swift-JWT"),
+        //         .product(name: "Factory", package: "Factory"),
+        //         .product(name: "ZIPFoundation", package: "ZIPFoundation")
+        //     ],
+        //     path: "Wrapper"
+        // ),
+        // .binaryTarget(
+        //     name: "ENMobileUtilsFramework",
+        //     url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileUtils/1.0.3/ENMobileUtils.zip",
+        //     checksum: "5a8b9581f346b73714f05a4bbe950276202d80429186f2fa24bb76976736af79"
+        //     //checksum: "b3b80618364cce2589fc847462a661cd429bfce5e5588f01e6329be311ab7f0b"
+        // ),
+
+        
         .target(
-            name: "ENMobileUtils",
-            dependencies: [
-                .target(name: "ENMobileUtilsFramework"),
-                .product(name: "Alamofire", package: "Alamofire"),
-                .product(name: "SwiftJWT", package: "Swift-JWT"),
-                .product(name: "Factory", package: "Factory"),
-                .product(name: "ZIPFoundation", package: "ZIPFoundation")
-            ],
-            path: "Wrapper"
+          name: "ENMobileUtilsTarget",
+          dependencies: [.target(name: "ENMobileUtilsWrapper",
+                                 condition: .when(platforms: [.iOS]))],
+          path: "Wrapper"
+        ),
+        .target(
+          name: "ENMobileUtilsWrapper",
+          dependencies: [
+            .target(
+              name: "ENMobileUtils",
+              condition: .when(platforms: [.iOS])
+            ),
+            .product(name: "Alamofire", package: "Alamofire"),      
+            .product(name: "SwiftJWT", package: "Swift-JWT"),
+            .product(name: "Factory", package: "Factory"),
+            .product(name: "ZIPFoundation", package: "ZIPFoundation")
+          ],
+          path: "Wrapper"
         ),
         .binaryTarget(
-            name: "ENMobileUtilsFramework",
-            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileUtils/1.0.3/ENMobileUtils.zip",
+            name: "ENMobileUtils",    
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileUtils/1.0.3/ENMobileUtils.zip",    
             checksum: "5a8b9581f346b73714f05a4bbe950276202d80429186f2fa24bb76976736af79"
-            //checksum: "b3b80618364cce2589fc847462a661cd429bfce5e5588f01e6329be311ab7f0b"
+            //checksum: "b3b80618364cce2589fc847462a661cd429bfce5e5588f01e6329be311ab7f0b"    
         )
     ]
 )
