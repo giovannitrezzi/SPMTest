@@ -12,7 +12,7 @@ let package = Package(
             targets: ["ENMobileUtils"]
         ),
         .library(
-            name: "ENMobileUtils",
+            name: "ENMobileUtilsDependencies",
             type: .dynamic,
             targets: ["ENMobileUtilsTarget"]
         )
