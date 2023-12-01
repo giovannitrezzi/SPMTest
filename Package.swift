@@ -71,7 +71,7 @@ let package = Package(
         .binaryTarget(
             name: "ENMobileUtils",    
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileUtils/1.0.3/ENMobileUtils.zip",    
-            checksum: "5a8b9581f346b73714f05a4bbe950276202d80429186f2fa24bb76976736af79"
+            checksum: "c913d3c3e82324100a4c4a088d7fa326cf1a9e1628d877c8d093c0ed19c72dbd"
             //checksum: "b3b80618364cce2589fc847462a661cd429bfce5e5588f01e6329be311ab7f0b"    
         )
     ]
