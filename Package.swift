@@ -12,7 +12,7 @@ let package = Package(
             targets: ["ENMobileUtils"]
         ),
         .library(
-            name: "ENMobileUtils",
+            name: "ENMobileUtilsDependencies",
             type: .dynamic,
             targets: ["ENMobileUtilsDependencies"]
         )
@@ -32,6 +32,7 @@ let package = Package(
         .target(
             name: "ENMobileUtilsDependencies",
             dependencies: [
+                .target(name: "ENMobileUtils"),
                 .product(name: "Alamofire", package: "Alamofire"),
                 .product(name: "SwiftJWT", package: "Swift-JWT"),
                 .product(name: "Factory", package: "Factory"),
