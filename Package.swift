@@ -8,8 +8,13 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ENMobileUtils",
+            name: "ENMobileUtilsDependenciesWrapper",
+            type: .dynamic
             targets: ["ENMobileUtilsDependenciesWrapper"]
+        ),
+        .library(
+            name: "ENMobileUtils",
+            targets: ["ENMobileUtils"]
         ),
     ],
     dependencies: [
