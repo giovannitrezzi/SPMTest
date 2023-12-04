@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "ENMobileUtils",
-            targets: ["ENMobileUtilsWrapper"]
+            targets: ["ENMobileUtilsDependenciesWrapper"]
         ),
     ],
     dependencies: [
@@ -24,13 +24,13 @@ let package = Package(
     //        dependencies: ["Alamofire", "Factory", .product(name: "SwiftJWT", package: "Swift-JWT"), "ZIPFoundation"],
     //        path: "Sources/ENMobileUtils"
     //    ),
+    //    .target(
+    //      name: "ENMobileUtilsTarget",
+    //      dependencies: [.target(name: "ENMobileUtilsWrapper")],
+    //      path: "SwiftPM-PlatformExclude/Wrapper"
+    //    ),
         .target(
-          name: "ENMobileUtilsTarget",
-          dependencies: [.target(name: "ENMobileUtilsWrapper")],
-          path: "SwiftPM-PlatformExclude/Wrapper"
-        ),
-        .target(
-            name: "ENMobileUtilsWrapper",
+            name: "ENMobileUtilsDependenciesWrapper",
             dependencies: [
                 .target(name: "ENMobileUtils"),
                 .product(name: "Alamofire", package: "Alamofire"),
