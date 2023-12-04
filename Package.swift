@@ -26,7 +26,7 @@ let package = Package(
     //    ),
         .target(
           name: "ENMobileUtilsTarget",
-          dependencies: [.target(name: "ENMobileUtilsWrapper"],
+          dependencies: [.target(name: "ENMobileUtilsWrapper")],
           path: "SwiftPM-PlatformExclude/Wrapper"
         )
         .target(
