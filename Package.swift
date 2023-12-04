@@ -24,19 +24,19 @@ let package = Package(
     //        dependencies: ["Alamofire", "Factory", .product(name: "SwiftJWT", package: "Swift-JWT"), "ZIPFoundation"],
     //        path: "Sources/ENMobileUtils"
     //    ),
-        // .target(
-        //     name: "ENMobileUtils",
-        //     dependencies: [
-        //         .target(name: "ENMobileUtilsFramework"),
-        //         .product(name: "Alamofire", package: "Alamofire"),
-        //         .product(name: "SwiftJWT", package: "Swift-JWT"),
-        //         .product(name: "Factory", package: "Factory"),
-        //         .product(name: "ZIPFoundation", package: "ZIPFoundation")
-        //     ],
-        //     path: "Wrapper"
-        // ),
-        .binaryTarget(
+        .target(
             name: "ENMobileUtils",
+            dependencies: [
+                .target(name: "ENMobileUtilsFramework"),
+                .product(name: "Alamofire", package: "Alamofire"),
+                .product(name: "SwiftJWT", package: "Swift-JWT"),
+                .product(name: "Factory", package: "Factory"),
+                .product(name: "ZIPFoundation", package: "ZIPFoundation")
+            ],
+            path: "Wrapper"
+        ),
+        .binaryTarget(
+            name: "ENMobileUtilsFramework",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileUtils/1.0.3/ENMobileUtils.zip",
             checksum: "c913d3c3e82324100a4c4a088d7fa326cf1a9e1628d877c8d093c0ed19c72dbd"
             //checksum: "b3b80618364cce2589fc847462a661cd429bfce5e5588f01e6329be311ab7f0b"
