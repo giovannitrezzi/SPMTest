@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "ENMobileUtils",
-            targets: ["ENMobileUtils"]
+            targets: ["ENMobileUtilsDependenciesWrapper"]
         ),
     ],
     dependencies: [
@@ -30,7 +30,7 @@ let package = Package(
     //      path: "SwiftPM-PlatformExclude/Wrapper"
     //    ),
         .target(
-            name: "ENMobileUtils",
+            name: "ENMobileUtilsDependenciesWrapper",
             dependencies: [
                 .target(name: "ENMobileUtilsFraework"),
                 .product(name: "Alamofire", package: "Alamofire"),
@@ -41,7 +41,7 @@ let package = Package(
             path: "Wrapper"
         ),
         .binaryTarget(
-            name: "ENMobileUtilsFraework",
+            name: "ENMobileUtils",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileUtils/1.0.3/ENMobileUtils.zip",
             checksum: "c913d3c3e82324100a4c4a088d7fa326cf1a9e1628d877c8d093c0ed19c72dbd"
             //checksum: "b3b80618364cce2589fc847462a661cd429bfce5e5588f01e6329be311ab7f0b"
