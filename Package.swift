@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "ENMobileCore",
+    name: "ENMobileCoreSDK",
     platforms: [
         .iOS(.v14)
     ],
