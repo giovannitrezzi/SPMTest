@@ -14,7 +14,7 @@ let package = Package(
         ),
         .library(
             name: "ENMobileCoreSDK",
-            targets: ["ENMobileUtils"]
+            targets: ["ENMobileCoreSDK"]
         ),
     ],
     dependencies: [
