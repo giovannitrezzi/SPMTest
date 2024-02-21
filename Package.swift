@@ -8,13 +8,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "AuxiliaryTarget",
-            type: .dynamic,
-            targets: ["AuxiliaryTarget"]
-        ),
-        .library(
             name: "ENMobileCoreSDK",
-            targets: ["ENMobileCoreSDK"]
+            targets: ["AuxiliaryTarget"]
         ),
     ],
     dependencies: [
