@@ -27,7 +27,8 @@ let package = Package(
                 .product(name: "SwiftJWT", package: "Swift-JWT"),
                 .product(name: "Factory", package: "Factory"),
                 .product(name: "ZIPFoundation", package: "ZIPFoundation")
-            ]
+            ],
+            path: "AuxiliaryEmpty"
         ),
         .binaryTarget(
             name: "ENMobileCoreSDK",
