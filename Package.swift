@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
@@ -27,8 +27,7 @@ let package = Package(
                 .product(name: "SwiftJWT", package: "Swift-JWT"),
                 .product(name: "Factory", package: "Factory"),
                 .product(name: "ZIPFoundation", package: "ZIPFoundation")
-            ],
-            path: "Wrapper"
+            ]
         ),
         .binaryTarget(
             name: "ENMobileCoreSDK",
